@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Shopping Cart</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 5px;
+            text-align: center;
+        } */
+
+        * {
+  box-sizing: border-box;
+}
+ 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #dffafd;
+  font-family: 'Roboto', sans-serif;
+}
+
+.shopping-cart {
+  width: 750px;
+  height: 423px;
+  margin: 80px auto;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+ 
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  height: 60px;
+  border-bottom: 1px solid #E1E8EE;
+  padding: 20px 30px;
+  color: #5E6977;
+  font-size: 18px;
+  font-weight: 400;
+}
+ 
+.item {
+  padding: 20px 30px;
+  height: 120px;
+  display: flex;
+}
+ 
+.item:nth-child(3) {
+  border-top:  1px solid #E1E8EE;
+  border-bottom:  1px solid #E1E8EE;
+}
+.buttons {
+  position: relative;
+  padding-top: 30px;
+  margin-right: 60px;
+}
+.delete-btn,
+.like-btn {
+  display: inline-block;
+  Cursor: pointer;
+}
+.delete-btn {
+  width: 18px;
+  height: 17px;
+  background: url(&amp;quot;delete-icn.svg&amp;quot;) no-repeat center;
+}
+ 
+.like-btn {
+  position: absolute;
+  top: 9px;
+  left: 15px;
+  background: url('twitter-heart.png');
+  width: 60px;
+  height: 60px;
+  background-size: 2900%;
+  background-repeat: no-repeat;
+}
+.is-active {
+  animation-name: animate;
+  animation-duration: .8s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(28);
+  animation-fill-mode: forwards;
+}
+ 
+@keyframes animate {
+  0%   { background-position: left;  }
+  50%  { background-position: right; }
+  100% { background-position: right; }
+}
+
+.image {
+  margin-right: 50px;
+}
+ 
+
+.description {
+  padding-top: 10px;
+  margin-right: 60px;
+  width: 115px;
+}
+ 
+.description span {
+  display: block;
+  font-size: 14px;
+  color: #43484D;
+  font-weight: 400;
+}
+ 
+.description span:first-child {
+  margin-bottom: 5px;
+}
+.description span:last-child {
+  font-weight: 300;
+  margin-top: 8px;
+  color: #86939E;
+}
+.quantity {
+  padding-top: 20px;
+  margin-right: 60px;
+}
+.quantity input {
+  -webkit-appearance: none;
+  border: none;
+  text-align: center;
+  width: 32px;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+ 
+button[class*=btn] {
+  width: 30px;
+  height: 30px;
+  background-color: #E1E8EE;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.minus-btn img {
+  margin-bottom: 3px;
+}
+.plus-btn img {
+  margin-top: 2px;
+}
+ 
+button:focus,
+input:focus {
+  outline:0;
+}
+.total-price {
+  width: 83px;
+  padding-top: 27px;
+  text-align: center;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+@media (max-width: 800px) {
+  .shopping-cart {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .item {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .image img {
+    width: 50%;
+  }
+  .image,
+  .quantity,
+  .description {
+    width: 100%;
+    text-align: center;
+    margin: 6px 0;
+  }
+  .buttons {
+    margin-right: 20px;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-12 product">
+                <img src="/images/chastity-cortijo-M8iGdeTSOkg-unsplash.jpg" alt="Product 1">
+                <p>Product 1</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 product">
+                <img src="image2.jpg" alt="Product 2">
+                <p>Product 2</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 product">
+                <img src="image3.jpg" alt="Product 3">
+                <p>Product 3</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 product">
+                <img src="image4.jpg" alt="Product 4">
+                <p>Product 4</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 product">
+                <img src="image5.jpg" alt="Product 5">
+                <p>Product 5</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 product">
+                <img src="image6.jpg" alt="Product 6">
+                <p>Product 6</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 product">
+                <img src="image7.jpg" alt="Product 7">
+                <p>Product 7</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 product">
+                <img src="image8.jpg" alt="Product 8">
+                <p>Product 8</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 product">
+                <img src="image9.jpg" alt="Product 9">
+                <p>Product 9</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 product">
+                <img src="image10.jpg" alt="Product 10">
+                <p>Product 10</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 product">
+                <img src="image11.jpg" alt="Product 11">
+                <p>Product 11</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 product">
+                <img src="image12.jpg" alt="Product 12">
+                <p>Product 12</p>
+            </div>
+        </div>
+    </div> -->
+   <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+   
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   -->
+   <div class="shopping-cart">
+    <!-- Title -->
+    <div class="title">
+      Shopping Bag
+    </div>
+   
+    <!-- Product #1 -->
+    <div class="item">
+      <div class="buttons">
+        <span class="delete-btn"></span>
+        <span class="like-btn"></span>
+      </div>
+   
+      <div class="image">
+        <img src="/i" alt="" />
+      </div>
+   
+      <div class="description">
+        <span>Common Projects</span>
+        <span>Bball High</span>
+        <span>White</span>
+      </div>
+   
+      <div class="quantity">
+        <button class="plus-btn" type="button" name="button">
+            <p>-</p>
+          <img src="plus.svg" alt="" />
+        </button>
+        <input type="text" name="name" value="1">
+        <button class="minus-btn" type="button" name="button">
+            <p>+</p>
+          <img src="minus.svg" alt="" />
+        </button>
+      </div>
+   
+      <div class="total-price">$549</div>
+    </div>
+   
+    <!-- Product #2 -->
+    <div class="item">
+      <div class="buttons">
+        <span class="delete-btn"></span>
+        <span class="like-btn"></span>
+      </div>
+   
+      <div class="image">
+        <img src="item-2.png" alt=""/>
+      </div>
+   
+      <div class="description">
+        <span>Maison Margiela</span>
+        <span>Future Sneakers</span>
+        <span>White</span>
+      </div>
+   
+      <div class="quantity">
+        <button class="plus-btn" type="button" name="button">
+          <!-- <img src="plus.svg" alt="" /> -->
+          <p>-</p>
+        </button>
+        <input type="text" name="name" value="1">
+        <button class="minus-btn" type="button" name="button">
+          <!-- <img src="minus.svg" alt="" /> -->
+          <p>+</p>
+        </button>
+      </div>
+   
+      <div class="total-price">$870</div>
+    </div>
+   
+    <!-- Product #3 -->
+    <div class="item">
+      <div class="buttons">
+        <span class="delete-btn"></span>
+        <span class="like-btn"></span>
+      </div>
+   
+      <div class="image">
+        <img src="item-3.png" alt="" />
+      </div>
+   
+      <div class="description">
+        <span>Our Legacy</span>
+        <span>Brushed Scarf</span>
+        <span>Brown</span>
+      </div>
+   
+      <div class="quantity">
+        <button class="plus-btn" type="button" name="button">
+          <!-- <img src="plus.svg" alt="" /> -->
+          <p>-</p>
+        </button>
+        <input type="text" name="name" value="1">
+        <button class="minus-btn" type="button" name="button">
+            <p>+</p>
+          <img src="minus.svg" alt="" />
+        </button>
+      </div>
+   
+      <div class="total-price">$349</div>
+    </div>
+  </div>
+
+
+<script>
+    $('.like-btn').on('click', function() {
+   $(this).toggleClass('is-active');
+});
+$('.minus-btn').on('click', function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $input = $this.closest('div').find('input');
+    var value = parseInt($input.val());
+
+    if (value > 1) {
+        value = value - 1;
+    } else {
+        value = 0;
+    }
+
+    $input.val(value);
+});
+
+$('.plus-btn').on('click', function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $input = $this.closest('div').find('input');
+    var value = parseInt($input.val());
+
+    if (value < 100) {
+        value = value + 1;
+    } else {
+        value = 100;
+    }
+
+    $input.val(value);
+});
+
+</script>
+
+</body>
+</html>

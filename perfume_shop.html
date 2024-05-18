@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/perfume/pexels-kdjproductions-1557980.jpg" type="image/x-icon">
+</head>
+<style>body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    /* margin-right: 39rem;
+    width: 10rem; */
+    /* height: 20vh; */
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    /* width: 10rem; */
+     height: 50vh; 
+}
+
+.product-card img {
+    max-width: 80%;
+    border-radius: 10px;
+
+}
+
+.product-card h3 {
+    margin: 10px 0;
+}
+
+.product-card p {
+    color: #777;
+}
+.product-card:first-child img{
+    height: 105px;
+
+}
+
+.product-card button {
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size:0.75rem;
+    margin-top: 30px;
+}
+
+
+.product-card button:hover {
+    background-color: #218838;
+}
+@media screen and (max-width:665px) {
+    .product-card{
+        height: 290px;
+    }
+    
+}
+</style>
+<body>
+    <div class="product-container">
+        <div class="product-card">
+            <img src="/perfume/pexels-didsss-1830450.jpg" alt="Motorola Edge 50 Pro">
+            <h3>Dior</h3>
+            <p>From ₹1200</p>
+
+    <button onclick="addToCart('Dior')" style="margin-right: 20px;">Add to Cart</button>
+    <button>Buy Now</button>
+    
+        </div>
+        <div class="product-card">
+            <img src="/perfume/pexels-didsss-1653085.jpg" alt="Vivo T3X 5G">
+            <h3>Gucci</h3>
+            <p>From ₹399</p>
+            <button onclick="addToCart('gucci')" style="margin-right: 20px;">Add to Cart</button>
+    <button>Buy Now</button>
+
+        </div>
+        <div class="product-card">
+            <img src="/perfume/pexels-fidel-2814832 (1).jpg" alt="Vivo T3X 5G">
+            <h3>Tom Ford </h3>
+            <p>From ₹1000</p>
+            <button onclick="addToCart('Tom Ford')"style="margin-right: 20px;" >Add to Cart</button>
+    <button>Buy Now</button>
+
+        </div>
+        <div class="product-card">
+            <img src="/perfume/pexels-kdjproductions-1557980.jpg" alt="Vivo T3X 5G">
+            <h3>Hermes`</h3>
+            <p>From ₹2599</p>
+            <button onclick="addToCart('Hermes')"style="margin-right: 20px;">Add to Cart</button>
+    <button>Buy Now</button>
+
+        </div>
+        <div class="product-card">
+            <img src="/perfume/pexels-pixabay-258244.jpg" alt="Vivo T3X 5G">
+            <h3>Constantin </h3>
+            <p>From ₹9999</p>
+            <button onclick="addToCart('Constantin ')"style="margin-right: 20px;">Add to Cart</button>
+    <button>Buy Now</button>
+
+        </div>
+        <div class="product-card">
+            <img src="/perfume/pexels-rovenimages-com-344613-949590.jpg" alt="Vivo T3X 5G">
+            <h3>Creed</h3>
+            <p>From ₹1599</p>
+            <button onclick="addToCart('Creed')"style="margin-right: 20px;">Add to Cart</button>
+    <button>Buy Now</button>
+
+        </div>
+        <div class="product-card">
+            <img src="/perfume/pexels-valeriya-1961795.jpg" alt="Vivo T3X 5G">
+            <h3>Bvlgari</h3>
+            <p>From ₹1999</p>
+            <button onclick="addToCart('Bvlgari')"style="margin-right: 20px;">Add to Cart</button>
+    <button>Buy Now</button>
+
+        </div>
+        <div class="product-card">
+            <img src="/perfume/pexels-jessbaileydesign-755992.jpg" alt="Vivo T3X 5G">
+            <h3>Timberland </h3>
+            <p>From ₹17,999</p>
+            <button onclick="addToCart('Timberland ')"style="margin-right: 20px;">Add to Cart</button>
+    <button>Buy Now</button>
+
+        </div>
+        <!-- Add more products as needed -->
+    </div>
+</body>
+<script>function addToCart(product) {
+    alert(product + " has been added to your cart.");
+    // Here you can add more functionality, like updating the cart count, saving to local storage, etc.
+}
+</script>
+</html>
