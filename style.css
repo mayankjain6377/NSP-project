@@ -3,18 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.parent
-{
-    /* display: flex; */
-
-}
 .logo img
 {
     height: 120px;
     width: 120px;
     padding: -5px;
-    /* margin: 5px; */
 }
 :root {
     --color-white-100: hsl(206, 5%, 100%);
@@ -39,7 +32,6 @@
     --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
        0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
-  
   *,
   *::before,
   *::after {
@@ -53,7 +45,6 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
-  
   html {
     font-size: 100%;
     box-sizing: inherit;
@@ -69,11 +60,9 @@
     color: var(--color-black-500);
     background-color: var(--color-white-100);
   }
-  
   main {
     overflow: hidden;
   }
-  
   a,
   button {
     cursor: pointer;
@@ -83,7 +72,6 @@
     background: none;
     box-shadow: none;
   }
-  
   img,
   video {
     display: block;
@@ -91,25 +79,21 @@
     height: auto;
     object-fit: cover;
   }
-  
   .section {
     margin: 0 auto;
     padding: 5rem 0 2rem;
   }
-  
   .container {
     max-width: 80rem;
     height: auto;
     margin: 0 auto;
     padding: 0 1.25rem;
   }
-  
   .centered {
     text-align: center;
     vertical-align: middle;
     margin-bottom: 1rem;
   }
-  
   .btn {
     display: inline-block;
     font-family: inherit;
@@ -187,7 +171,6 @@
     height: auto;
     margin: 0 auto;
     padding-block: 1rem;
-    /* margin-right: 300px; */
   }
   .search-form {
     display: flex;
@@ -226,6 +209,7 @@
     margin-top: 0.25rem;
     color: var(--color-white-500);
     background: transparent;
+    margin-left: 130px;
 
   }
   @media only screen and (min-width: 62rem) {
@@ -348,7 +332,8 @@
   .container-head{
     width: 1100px;
     height: 400px;
-    background-color: #c77f7f;
+    /* background-color: #c77f7f; */
+    background-color: #f3d9d9;
     margin: 70px;
     margin-top: 100px;
   }
@@ -439,14 +424,10 @@
       margin-bottom: 10px;
 }
   .deal{
-
-    /* object-fit: contain; */
     height: 500px;
     width: 400px;
     border-radius: 20px;
-    /* background-color: #837575; */
-    /* background-color: #e0d4d4; */
-    background-color: #F3F3F3;
+  background-color: #F3F3F3;
     
   }
   .more{
@@ -460,27 +441,20 @@
   .product-img img{
     height: 250px;
     width: 400px;
-    /* margin-bottom: 400px; */
-    /* padding-bottom: 100px; */
-
   }
 #deal1{
     height: 200px;
-    /* width: 350px; */
     width: 400px;
-    /* background-image: url('/images/pat-taylor-12V36G17IbQ-unsplash.jpg');
-    background-size: cover; */
+    background-size: cover; 
 }
 #deal2{
     height: 200px;
-    /* width: 350px; */
     width: 400px;
     background-image: url('/images/box3_image.jpg');
     background-size: cover;
 }
 #deal3{
     height: 200px;
-    /* width: 350px; */
     width: 400px;
     background-image: url('/images/box3_image.jpg');
     background-size: cover;
@@ -488,9 +462,6 @@
 .product-flex{
     display: flex;
     justify-content: space-between;
-    /* justify-content: center; */
-    /* gap: 250px; */
-    /* margin: 10px; */
     padding: 10px;
     width: 100%;
     margin-bottom: 5px;
@@ -522,7 +493,6 @@
   height: 35px;
   padding: 10px 12px;
   font-weight: 700;
-  /* margin-left: 30px; */
   background-color:rgb(228, 242, 255);
   background-color: black;
   border-radius: 5px;
@@ -530,11 +500,9 @@
   margin-left: 5px;
   margin-top: 5px;
 }
-
   .panel {
     height: 40px;
     background-color: rgb(60, 88, 98);
-    /* background-color: rgb(237, 172, 234); */
     display: flex;
     color: white;
     align-items: center;
@@ -563,32 +531,16 @@
     height: 400px;
     width: 500px;
 }
-.line {
-    background-color: rgb(60, 88, 98);
-    align-items: center;
-    text-align: center;
-    display: flex;
-    color: white;
-    font-weight: 300;
-    font-size: 0.70rem;
-    letter-spacing: 1px;
-    /* padding-left: 150px; */
-    /* height: 25px; */
-    justify-content: center;
-}
-
 .shop {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /* background-color: rgba(237, 172, 234, 0.402); */
     background-color: #F4F5F5;
 }
 .box {
     height: 445px;
     width: 23%;
     background-color: white;
-    /* border:2px solid #a25b5b; */
     padding: 20px 0px 15px;
     margin-top: 15px;
 }
@@ -611,18 +563,6 @@
     color: rgb(41, 38, 41);
     font-weight: 700;
 }
-.sign-in {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 0px 20px;
-}
-.new {
-    text-align: center;
-    font-size: 0.85rem;
-    font-weight: 500;
-    margin-top: 10px;
-}
-
 .foot-panel1 {
     background-color: rgb(47, 159, 200);
     color: white;
@@ -779,39 +719,29 @@ color: #125688;
 background: #fefefe;
 border-color: #125688;
 }
-/* .logofoot {
-    background-image: url("logo4.jpg");
-    background-size: cover;
-    height: 50px;
-    width: 100%;
-} */
 .img4{
     background-size: cover;
-    height: 170px;
+    height: 150px;
     width: 200px;
-    /* margin-top: 50px;*/
-    /* margin-bottom: 50px;  */
-    padding-top: 50px;
+    padding-top: 30px;
 }
 .flex{
     display: flex;
     background-color: black;
     height: 170px;
     margin-top: 2px;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-top: 20px;
 }
 .foot-panel4 {
     background-color: black;
     color: white;
     height: 100px;
-    /* 
-    display: flex;
-    justify-content: center;
-    align-items: center; */
     font-size: 0.7rem;
     text-align: center;
-    /* margin-top: 0px; */
+}
+.foot-panel5{
+  margin-top: 40px;
 }
 .pages {
     padding-top: 25px;
